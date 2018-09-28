@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace StockDataDownloader
 {
     class Program
@@ -20,9 +21,13 @@ namespace StockDataDownloader
             public string Ticker;
 
 
+            public void Download()
+            {
 
+                string filter = "ITEM_SECTOR%3D%3Ds" + Ticker + Exhange + "%26%26DELETED!%3Dn1&stop=now&start=1537912800000&ascending=true";
+            }
 
-            string filter = "ITEM_SECTOR%3D%3Ds" + Ticker + Exhange +"%26%26DELETED!%3Dn1&stop=now&start=1537912800000&ascending=true";
+            
         }
         static void Main(string[] args)
         {
